@@ -28,4 +28,4 @@ async def password(ctx):
     await ctx.send(gen_pass(10))
 
 
-bot.run("MTI5Njk4MzY1ODQyNjUzMTg0MA.GeTRXU._pmeNHey6gkM8g_jCHh7mJfGPUgEKY7mqR5Hvg")
+bot.run("token")
