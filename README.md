@@ -1,6 +1,6 @@
-# Password
 import discord, random
 from bot_log import gen_pass
+from bot_e import gen_emodji 
 from discord.ext import commands
 
 # La variable intents almacena los privilegios del bot
@@ -28,5 +28,23 @@ async def bye(ctx):
 async def password(ctx):
     await ctx.send(gen_pass(10))
 
+@bot.command()
+async def emodji(ctx):
+    await ctx.send(gen_emodji())
+
+@bot.command()
+async def mem(ctx):
+    with open('images/mem1.jpg', 'rb') as f:
+        picture = discord.File(f)
+    await ctx.send(file=picture)
+
+@bot.command('duck')
+async def duck(ctx):
+   
+    image_url = get_duck_image_url()
+    await ctx.send(image_url)
+   
+
 
 bot.run("token")
+
